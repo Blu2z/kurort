@@ -1,0 +1,66 @@
+.blur {
+    -moz-filter: blur(5px);
+    -webkit-filter: blur(5px);
+    background: inherit;
+    filter: blur(5px);
+    filter: url('#blur'); /* путь к svg */
+    height: 200px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.tabs {
+    margin-top: 23px;
+
+    ul {
+        @extend .align-center;
+        text-align: center;
+    }
+}
+.tab {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: $clr-gray;
+    color: $clr-tetx-lite;
+    border-radius: 5px 5px 0 0;
+    font-size: 16px;
+
+    &.active {
+        background-color: $clr-green-active;
+        color: #eee;
+    }
+
+    &:before {
+        padding: 5px 35px 5px 0;
+        content: "";
+        background: url(/images/icons-medium.png) -11px -12px no-repeat;
+    }
+
+    @include m('sanatorium') { &:before {background-position: -11px -12px;}}
+    @include m('mountains') { &:before {background-position: -50px -12px;}}
+    @include m('sea') { &:before {background-position: -96px -12px;}}
+    @include m('leisure') { &:before {background-position: -142px -12px;}}
+}
+
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label:before {
+    background:  url(/images/checkbox.png) 0 0 no-repeat;
+    content: ' ';
+    cursor:pointer;
+    display:inline-block;
+    height: 14px;
+    margin: -1px 15px 0 0;
+    vertical-align:middle;
+    width: 14px;
+}
+
+input[type="checkbox"]:checked + label:before {
+    content: ' ';
+    background-position: -16px 0;
+}

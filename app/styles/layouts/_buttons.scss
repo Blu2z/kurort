@@ -1,0 +1,43 @@
+.button-default {
+	color: #fff;
+	box-sizing: border-box;
+	border-radius: 5px;
+	border-bottom: 1px solid #333;
+	box-shadow: 0 2px 0 0 #333;
+	background-color: current;
+	padding: 9px 18px;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+.button {
+	@extend .button-default;
+
+	@include m('yelow') {
+		background-color: $clr-orange;
+		box-shadow: 0 2px 0 0 $clr-orange - $clr-shadow;
+		border-color: $clr-orange + $clr-border;
+
+		&:hover {
+			background-color: $clr-orange-strong;
+		}
+	}
+
+	@include m('blue') {
+		background-color: $clr-blue;
+		box-shadow: 0 2px 0 0 $clr-blue - $clr-shadow;
+		border-color: $clr-blue + $clr-border;
+
+		&:hover {
+			background-color: $clr-blue + $clr-border;
+		}
+	}
+
+	@include m('width-fix') {
+		display: inline-block;
+		width: 100%;
+	}
+}

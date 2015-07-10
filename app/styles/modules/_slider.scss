@@ -1,0 +1,33 @@
+.slider {
+	margin-top: -255px;
+	margin-bottom: -255px;
+	width: inherit;
+	height: 810px;
+	overflow: hidden;
+
+	ul {
+		width: 10000px;
+	}
+
+	li {
+		float: left;
+		background-image: url(/images/bg_1920.jpg);
+	}
+
+	@include e('btn') {
+		position: absolute;
+		background: url(/images/slider-nav.png) 0 0 no-repeat;
+		top: 450px;
+		width: 34px;
+		height: 86px;
+
+		@include m('next') {
+			right: 0;
+		}
+
+		@include m('prew') {
+			left: 0;
+			background-position: -37px 0;
+		}
+	}
+}
