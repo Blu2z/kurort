@@ -7,6 +7,7 @@
 	background-color: current;
 	padding: 9px 18px;
 	text-decoration: none;
+	line-height: 2.9em;
 
 	&:hover,
 	&:focus {
@@ -36,8 +37,19 @@
 		}
 	}
 
+	@include m('green') {
+		background-color: $clr-green-active;
+		box-shadow: 0 2px 0 0 $clr-green-active - $clr-shadow;
+		border-color: $clr-green-active + $clr-border;
+
+		&:hover {
+			background-color: $clr-green-active + $clr-border;
+		}
+	}
+
 	@include m('width-fix') {
 		display: inline-block;
 		width: 100%;
+		line-height: 1em;
 	}
 }

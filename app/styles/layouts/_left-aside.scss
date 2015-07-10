@@ -1,0 +1,9 @@
+aside {
+	display: inline-block;
+	width: 210px;
+	text-align: left;
+
+	&>.content__cards {
+		margin-right: 10px;
+	}
+}

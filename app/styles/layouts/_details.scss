@@ -1,3 +1,8 @@
+.browserupgrade {
+    position: absolute;
+    color: red;
+    z-index: 9999;
+}
 .blur {
     -moz-filter: blur(5px);
     -webkit-filter: blur(5px);
@@ -26,16 +31,28 @@
     color: $clr-tetx-lite;
     border-radius: 5px 5px 0 0;
     font-size: 16px;
+    cursor: pointer;
+
+    @include m('img') {
+        &:before {
+            padding: 5px 35px 5px 0;
+            content: "";
+            background: url(/images/icons-medium.png) -11px -12px no-repeat;
+        }
+    }
 
     &.active {
         background-color: $clr-green-active;
         color: #eee;
     }
-
-    &:before {
-        padding: 5px 35px 5px 0;
-        content: "";
-        background: url(/images/icons-medium.png) -11px -12px no-repeat;
+    @include m('transparency') {
+        background-color: rgba(255, 255, 255, 0);
+        color: $clr-text-default;
+        font-weight: bold;
+        p {
+            border-bottom: 1px solid $clr-green-active;
+            line-height: .4em;
+        }
     }
 
     @include m('sanatorium') { &:before {background-position: -11px -12px;}}
@@ -44,6 +61,19 @@
     @include m('leisure') { &:before {background-position: -142px -12px;}}
 }
 
+.social {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: url(/images/icon-social.png) 0 0 no-repeat;
+
+    @include m('fb') {background-position: 0 0;}
+    @include m('tw') {background-position: -22px 0;}
+    @include m('vk') {background-position: -45px 0;}
+    @include m('od') {background-position: -65px 0;}
+}
+
+.container {background: $clr-bg url(/images/bg_1920_crop.jpg) 0 0 no-repeat;}
 
 input[type="checkbox"] {
     display:none;
@@ -63,4 +93,10 @@ input[type="checkbox"] + label:before {
 input[type="checkbox"]:checked + label:before {
     content: ' ';
     background-position: -16px 0;
+}
+
+.img {
+    @include m('border') {
+        border-radius: 5px;
+    }
 }

@@ -15,7 +15,9 @@
 @import "modules/header";
 @import "modules/slider";
 @import "modules/index";
-// @import "modules/footer";
+@import "modules/sanatorium";
+@import "modules/footer";
+@import "modules/carousel";
 
 
 
@@ -26,6 +28,7 @@
 /* layouts */
 @import "layouts/details";
 @import "layouts/buttons";
+@import "layouts/left-aside";
 
 
 /* include fonts */
@@ -45,7 +48,8 @@ body {
     font-family: "Arial Regular", arial;
     min-height: 808px;
     min-width: 1024px;
-    width: 100%
+    width: 100%;
+    color: $clr-text-default;
 }
 img {
     max-width: 100%;
@@ -84,4 +88,7 @@ hr {
     border: none;
     height: 1px;
     margin: .7em 0;
+}
+p {
+    padding: 5px 0;
 }

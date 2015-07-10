@@ -1,11 +1,10 @@
 .slide__desc {
 	position: absolute;
-    height: 185px;
     width: 540px;
     top: 310px;
     left: 40%;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 15px 20px 10px 45px;
+    padding: 15px 20px 15px 45px;
     border-radius: 15px;
     box-sizing: border-box;
     color: $clr-text;
@@ -17,6 +16,7 @@
     p {
     	font-size: 1.1em;
     	line-height: 1.4em;
+    	margin-bottom: -1em;
     }
 }
 
@@ -63,9 +63,9 @@
 }
 
 .content {
-	background: #eeecd5 url(/images/bg2.png) 0 0 no-repeat;
+	background: $clr-bg url(/images/bg2.png) 0 0 no-repeat;
 	border-top: 2px solid #fff;
-	padding-top: 35px;
+	padding: 35px 0 50px 0;
 
 	@include e('wrap') {
 		@extend .align-center;
@@ -81,6 +81,13 @@
 		&:not(:last-child) {
 			margin-right: 10px;
 		}
+	}
+
+	@include e('desc') {
+		background-color: #fff;
+		border-radius: 10px 10px 0 0;
+		text-align: left;
+		margin-top: 30px;
 	}
 }
 
@@ -134,14 +141,11 @@
 	border-radius: 5px;
 	border: 1px solid #fff;
 	display: inline-block;
+	font-size: 13px;
 	margin-top: 20px;
 	text-align: left;
 	vertical-align: top;
 	width: 49%;
-	font-size: 13px;
-	// line-height: 1.8em;
-
-
 	&:nth-child(odd) {
 			margin-right: 10px;
 		}
@@ -165,7 +169,6 @@
 
 	@include e('content') {
 		padding: 15px 25px;
-		// font-size: 13px;
 		color: $clr-gray-text;
 
 		@include m('list') {
@@ -191,6 +194,7 @@
 			p {
 				line-height: 1.8em;
 				font-size: 15px;
+				padding: 0;
 			}
 
 			ul {
@@ -212,17 +216,38 @@
 			dl {}
 
 			dt {
-				// font-size: 13px;
 				text-transform: uppercase;
-				padding: 10px 5px;
+				padding: 25px 5px;
 			}
 
 			dd {
 				line-height: 1.8em;
-				border-left: 1px solid #333;
-				padding-left: 30px;
+				padding-left: 25px;
 				margin-left: 5px;
+				position: relative;
+				&:before {
+					content: ' ';
+					top: 5%;
+					left: 0;
+					height: 90%;
+					border-left: 2px solid $clr-tetx-lite;
+					position: absolute;
+				}
 			}
+		}
+
+		@include m('comment') {
+			line-height: 1.8em;
+
+			.date {
+				color: $clr-green-medium;
+			}
+
+			strong {
+				font-weight: bold;
+			}
+
+
 		}
 	}
 
