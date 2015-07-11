@@ -1,10 +1,18 @@
 .aside {
 	@include e('rigth') {
-		width: 265px;
-		margin-left: 30px;
+		width: 235px;
+		margin-left: 40px;
 
 		& > * {
+			@extend .theme-window;
 			width: 100%;
+			&:not(:last-child) {
+				margin-bottom: 33px;
+			}
+		}
+
+		img {
+			border: 2px solid #fff;
 		}
 	}
 
