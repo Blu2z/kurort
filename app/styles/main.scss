@@ -18,6 +18,7 @@
 @import "modules/sanatorium";
 @import "modules/footer";
 @import "modules/carousel";
+@import "modules/question";
 
 
 
@@ -29,6 +30,7 @@
 @import "layouts/details";
 @import "layouts/buttons";
 @import "layouts/left-aside";
+@import "layouts/rigth-aside";
 
 
 /* include fonts */
@@ -62,7 +64,9 @@ a:focus {
    text-decoration: underline;
 }
 
-strong {}
+strong {
+    font-weight: bold;
+}
 
 h1, h2, h3, h4, h5 {
     font-family:  sans-serif;
@@ -91,4 +95,22 @@ hr {
 }
 p {
     padding: 5px 0;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+content: " ";
+display: table;
+}
+.clearfix:after {
+visibility: hidden;
+        display: block;
+        content: "";
+        clear: both;
+        height: 0;
+        
+}
+.clearfix {
+*zoom: 1;
 }

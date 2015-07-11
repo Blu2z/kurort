@@ -24,6 +24,13 @@
 	position: relative;
 	margin: 0 auto;
 	max-width: 1024px;
+	@include e('separator') {
+		position: absolute;
+		right: -20px;
+		height: 90px;
+		border-left: 3px solid rgba(0, 0, 0, 0.07);
+		top: 25%;
+	}
 
   	@include e('container') {
   		position: relative;
@@ -36,10 +43,19 @@
   		@include m('circle') {
   			border-radius: 93px;
   			background-color: rgba(255, 255, 255, 0.75);
+  			& > * {
+			width: 75%;
+			}
+  		}
+
+  		@include m('bold') {
+  			font-weight: bold;
+  			line-height: 1.4em;
+  			width: 205px;
+  			margin: 0 20px;
   		}
 
 	  	& > * {
-			width: 75%;
 			margin: 0 auto;
 		}
   	}
@@ -77,9 +93,14 @@
 		border-radius: 5px;
 		border: 2px solid #fff;
 		text-align: left;
+		margin-bottom: 15px;
 
 		&:not(:last-child) {
 			margin-right: 10px;
+		}
+
+		@include m('w200') {
+			width: 200px; //for ie9
 		}
 	}
 
@@ -93,6 +114,7 @@
 
 .cards {
 	@include e('img') {}
+
 	@include e('title') {
 		color: #fff;
 		font-size: 18px;
@@ -117,6 +139,11 @@
 		padding: 15px 5px 10px 20px;
 		color: 	#2e3e41;
 
+		@include m('san') {
+			padding-left: 10px;
+			font-size: .85em;
+		}
+
 		ul {
 			padding-bottom: 20px;
 		}
@@ -133,6 +160,17 @@
 			font-weight: bold;
 			line-height: 1.4em;
 		}
+	}
+
+	@include e('day') {
+		font-size: 16px;
+		padding-top: 10px;
+	}
+
+	@include e('view') {
+		text-align: left;
+		font-size: 20px;
+		padding: 30px 0;
 	}
 }
 

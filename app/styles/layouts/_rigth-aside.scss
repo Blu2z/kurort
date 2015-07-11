@@ -1,0 +1,11 @@
+.aside {
+	@include e('rigth') {
+		width: 265px;
+		margin-left: 30px;
+
+		& > * {
+			width: 100%;
+		}
+	}
+
+}
