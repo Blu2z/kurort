@@ -85,6 +85,12 @@
 
 	@include e('wrap') {
 		@extend .align-center;
+
+		.title {
+			font-size: 20px;
+			color: $clr-blue-midle;
+			padding-bottom: 10px;	
+		}
 	}
 
 	@include e('cards') {
@@ -109,6 +115,77 @@
 		border-radius: 10px 10px 0 0;
 		text-align: left;
 		margin-top: 30px;
+
+		@include m('p25') {
+			padding: 25px;
+		}
+	}
+
+	@include e('contacts') {
+		@extend .inline-block-vtop;
+		width: 50%;
+		box-sizing: border-box;
+		padding-right: 20px;
+		font-size: 14px;
+		margin: 30px -4px 30px 0;
+
+		li {
+			line-height: 1.5em;
+		}
+
+		.e-mail,
+		.e-mail:hover,
+		.e-mail:focus {
+			border-bottom: 1px solid $clr-green-active;
+			text-decoration: none;
+			padding: 0 3px 2px;
+		}
+	}
+
+	@include e('phone') {
+		padding: 10px 0;
+		font-size: 22px;
+		display: inline-block;
+		padding-right: 20px;
+		font-weight: bold;
+		.clr-black {
+			color: #000;
+		}
+	}
+
+	@include e('managers') {}
+
+	@include e('manager') {
+		@extend .inline-block-vtop;
+		box-sizing: border-box;
+		margin-top: 15px;
+		padding: 0 35px;
+		position: relative;
+		width: 33%;
+
+		img {
+			border-radius: 91px;
+			margin: 0 auto;
+			display: block;
+		}
+
+		@include m('name') {
+			font-size: 18px;
+			padding-bottom: 25px;
+		}
+
+		@include m('desc') {
+			font-size: .85em;
+
+			li {
+				padding: .45em 0;
+			}
+		}
+	}
+
+	@include m('separator') {
+		@extend .adv__separator;
+		right: 0;
 	}
 }
 
@@ -121,6 +198,7 @@
 		padding: 10px 20px;
 		margin-top: -40px;
 	}
+
 	@include e('link') {
 		border-bottom: 	1px solid $clr-green-active;
 		
@@ -202,12 +280,16 @@
 		@include m('yelow') {background-color: $clr-yelow-lite;}
 		@include m('viol') {background-color: $clr-viol;}
 		@include m('rose') {background-color: $clr-rose;}
-
 	}
 
 	@include e('content') {
 		padding: 15px 25px;
 		color: $clr-gray-text;
+
+		h6 {
+			font-size: 18px;
+			padding-bottom: 10px;
+		}
 
 		@include m('list') {
 			ul {
@@ -216,11 +298,11 @@
 				&:nth-child(even) {
 					padding-left: 20px;
 				}
-
-				li {
-					
-				}
 			}
+		}
+
+		@include m('small') {
+			padding: 15px;
 		}
 
 		@include m('info') {
@@ -284,8 +366,6 @@
 			strong {
 				font-weight: bold;
 			}
-
-
 		}
 	}
 
