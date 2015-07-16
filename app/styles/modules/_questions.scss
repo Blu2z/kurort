@@ -1,22 +1,3 @@
-.san {
-	@include e('desc') {
-		margin: 0 40px 0 25px;
-		padding: 25px 0;
-		line-height: 1.5em;
-
-		img {
-			@include clearfix;
-			margin-right: 30px;
-		}
-	}
-
-	@include e('tabs') {
-		@extend .inline-block-vtop;
-		
-		width: 785px;
-	}
-}
-
 .questions {
 	@extend .align-left;
 	color: #fff;
@@ -70,7 +51,6 @@
 			margin: 10px 0;
 		}
 		input {
-			// height: 25px;
 			margin-left: 12px;
 			width: 215px;
 		}

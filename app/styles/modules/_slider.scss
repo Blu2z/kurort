@@ -1,5 +1,5 @@
 .slider {
-	margin-top: -255px;
+	margin-top: -265px;
 	margin-bottom: -255px;
 	width: inherit;
 	height: 810px;
@@ -12,6 +12,7 @@
 	li {
 		float: left;
 		background-image: url(/images/bg_1920.jpg);
+		position: relative;
 	}
 
 	@include e('btn') {

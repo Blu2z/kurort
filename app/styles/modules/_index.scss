@@ -332,12 +332,19 @@
 			}
 		}
 
-		@include m('acord') {
+		@include m('accord') {
 			dl {}
 
 			dt {
 				text-transform: uppercase;
-				padding: 25px 5px;
+				padding: 16px 5px;
+				cursor: pointer;
+				&:hover {
+					color: $clr-blue-midle;
+					background-color: #eee;
+					border-radius: 5px;
+					// text-decoration: underline;
+				}
 			}
 
 			dd {

@@ -3,9 +3,6 @@
 
 @import "mixins";
 
-
-
-
 /* core */
 @import "core/pallete";
 @import "core/extends";
@@ -19,14 +16,21 @@
 @import "modules/footer";
 @import "modules/carousel";
 @import "modules/question";
+@import "modules/questions";
 @import "modules/paginator";
 @import "modules/sanatorium-main";
 @import "modules/map";
+@import "modules/select";
+@import "modules/reservation";
+@import "modules/ion.rangeSlider";
+
+/*pages*/
 
 
+/*vendor*/
+@import "vendor/jquery-ui/datepicker";
+@import "vendor/font-awesome/font-awesome";
 
-
-@import "font-awesome/font-awesome";
 
 
 /* layouts */
@@ -99,7 +103,16 @@ hr {
 p {
     padding: 5px 0;
 }
+input[type="text"] {
+    height: 34px;
+    padding: 3px 10px;
+    box-sizing: border-box;
+}
 
+textarea,
+input[type="text"] {
+       border-radius: 5px; 
+}
 
 .clearfix:before,
 .clearfix:after {
@@ -117,3 +130,5 @@ visibility: hidden;
 .clearfix {
 *zoom: 1;
 }
+
+

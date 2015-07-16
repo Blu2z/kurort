@@ -48,12 +48,12 @@
                  <div class="info info__phone"><img src="images/icon-phone.png" height="35" width="35" alt="phone">
                  <p>Консультации по
                  телефону <br><br>
-                 с <span>8.00</span> до <span>20.00<br>
-                     без выходных</span>
+                 с <strong>8.00</strong> до <strong>20.00<br>
+                     без выходных</strong>
                  </p></div>
              </div>
              <div class="head__container head__container--phone">
-                <div class="info info__phone--free"> 8 (800) <span>767-98-76</span></div>
+                <div class="info info__phone--free"> 8 (800) <span class="black">767-98-76</span></div>
                 <p>бесплатный звонок по России</p>
                 <a href="#" class="button button--width-fix button--yelow">Заказать звонок</a>
              </div>
@@ -64,7 +64,7 @@
     <nav>
         <div class="navbar">
             <ul>
-                <li class="active">
+                <li>
                     <a href="#">О турфирме <i class="fa fa-caret-down"></i></a>
                     <ul class="subcategory">
                         <li><a href="sanatory.html">Документы</a></li>
@@ -74,11 +74,27 @@
                         <li><a href="#">Полезная информация</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Путевки в санатории</a></li>
-                <li><a href="#">Отдых в горах</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Задать вопрос</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li>
+                    <a href="#">Путевки в санатории <i class="fa fa-caret-down"></i></a>
+                    <ul class="subcategory">
+                        <li><a href="sanatory.html">Пятигорск</a></li>
+                        <li><a href="sanatory.html">Железноводск</a></li>
+                        <li><a href="sanatory.html">Ессентуки</a></li>
+                        <li><a href="sanatory.html">Кисловодск</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Отдых в горах <i class="fa fa-caret-down"></i></a>
+                    <ul class="subcategory">
+                        <li><a href="sanatory.html">Архыз</a></li>
+                        <li><a href="sanatory.html">Тиберда</a></li>
+                        <li><a href="sanatory.html">Домбай</a></li>
+                        <li><a href="sanatory.html">Приэльбрусье</a></li>
+                    </ul>
+                </li>
+                <li><a href="reservation.html">Отзывы</a></li>
+                <li><a href="question.html">Задать вопрос</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </div>
     </nav>
@@ -96,9 +112,36 @@
                     </svg>
                 </div>
             </li>
-            <li><img src="images/bg_1920.jpg" alt="1"></li>
-            <li><img src="images/bg_1920.jpg" alt="1"></li>
-            <li><img src="images/bg_1920.jpg" alt="1"></li>
+            <li>
+                <img src="images/bg_1920.jpg" alt="1">
+                <div class="blur">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <filter id="blur">
+                            <feGaussianBlur stdDeviation="3" />
+                        </filter>
+                    </svg>
+                </div>
+            </li>
+            <li>
+                <img src="images/bg_1920.jpg" alt="1">
+                <div class="blur">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <filter id="blur">
+                            <feGaussianBlur stdDeviation="3" />
+                        </filter>
+                    </svg>
+                </div>
+            </li>
+            <li>
+                <img src="images/bg_1920.jpg" alt="1">
+                <div class="blur">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <filter id="blur">
+                            <feGaussianBlur stdDeviation="3" />
+                        </filter>
+                    </svg>
+                </div>
+            </li>
         </ul>
 
         <div class="slider__nav">
@@ -139,14 +182,17 @@
     </section>
         <div class="tabs">
             <ul>
-                <li class="tab tab--img tab--sanatorium active">Санатории КМВ</li>
-                <li class="tab tab--img tab--mountains">Отдых в горах</li>
-                <li class="tab tab--img tab--sea">Отдых на море</li>
-                <li class="tab tab--img tab--leisure">Активный отдых</li>
+                <li class="tab tab--img tab--sanatorium active" data-tab="tabs__1">Санатории КМВ</li>
+                <li class="tab tab--img tab--mountains" data-tab="tabs__2">Отдых в горах</li>
+                <li class="tab tab--img tab--sea" data-tab="tabs__3">Отдых на море</li>
+                <li class="tab tab--img tab--leisure" data-tab="tabs__4">Активный отдых</li>
             </ul>
         </div>
 
     <section class="content">
+
+<!-- begin tabs-1 -->
+    <div class="tabs__container tabs__1">
         <div class="content__wrap">
             <div class="content__cards">
                 <div class="cards__img">
@@ -217,6 +263,235 @@
                 </div>
             </div>
         </div>
+    </div>
+<!-- end tabs-1 -->
+
+<!-- begin tabs-2 -->
+    <div class="tabs__container tabs__2">
+        <div class="content__wrap">
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- end tabs-2 -->
+
+<!-- begin tabs-3 -->
+    <div class="tabs__container tabs__3">
+        <div class="content__wrap">
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- end tabs-3 -->
+
+<!-- begin tabs-4 -->
+    <div class="tabs__container tabs__4">
+        <div class="content__wrap">
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+            <div class="content__cards">
+                <div class="cards__img">
+                    <img src="images/screen-img.png" alt="alt">
+                </div>
+                <div class="cards__title">
+                    <h6>Пятигорск</h6>
+                </div>
+                <div class="cards__cost">
+                    <ul>
+                        <li><a href="#" class="cards__link">Пятигорский Нарзан</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Лесная поляна</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Зори Ставрополья</a> <span>от 7000 Р</span></li>
+                        <li><a href="#" class="cards__link">Ленинские скалы</a> <span>от 7000 Р</span></li>
+                    </ul>
+                    <div class="al-r"><a href="#" class="cards__link cards__link--blue">Другие санатории</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- end tabs-4 -->
+
+
         <div class="content__wrap">
             
                 <div class="i-block">
@@ -310,7 +585,7 @@
                                 </li>
                                 <li>
                                 <input type="checkbox" class="checkbox" id="checkbox21">
-                                    <label for="checkbox21">Сачхарный диабет</label>
+                                    <label for="checkbox21">Сахарный диабет</label>
                                 </li>
                                 <li>
                                 <input type="checkbox" class="checkbox" id="checkbox22">
@@ -348,10 +623,10 @@
                 <div class="i-block__title i-block__title--viol">
                     <h3>Вопрос-ответ</h3>
                 </div>
-                <div class="i-block__content i-block__content--acord">
+                <div class="i-block__content i-block__content--accord">
                     <dl>
                         <dt>что входит в стоимость санаторно-курортной путевки?</dt>
-                        <dd><blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod cum, veritatis corporis dolor impedit reprehenderit voluptates eligendi mollitia ducimus alias provident tempora assumenda ab laudantium itaque, voluptatum voluptate enim illo?</blockquote></dd>
+                        <dd> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod cum, veritatis corporis dolor impedit reprehenderit voluptates eligendi mollitia ducimus alias provident tempora assumenda ab laudantium itaque, voluptatum voluptate enim illo?</dd>
                         <dt>какие процедуры мне будут оказывать?</dt>
                         <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae quis voluptatibus inventore ipsam, incidunt eum adipisci facilis, vel nam, sapiente quo ipsum nihil blanditiis reprehenderit. Assumenda obcaecati quia, delectus ullam!</dd>
                         <dt>что такое санаторно-курортная карта?</dt>
@@ -478,8 +753,28 @@
   <!-- endbuild -->
 
   <!-- build:js scripts/main.js -->
-
+<script src="scripts/main.js"></script>
   <!-- endbuild -->
 
+  <!-- build:js scripts/vendor.js -->
+<script src="scripts/jquery-ui.js"></script>
+<!-- endbuild -->
+
+
+<script>
+
+(function() {
+    $('dd').filter(':nth-child(n+4)').hide();
+    $('dl').on('click', 'dt', function() {
+        $(this)
+            .next()
+                .slideDown(300)
+                    .siblings('dd')
+                        .slideUp(300);
+    
+    })
+})();
+
+</script>
 </body>
 </html>
