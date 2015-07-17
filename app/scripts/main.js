@@ -141,9 +141,106 @@ if (typeof Object.create !== 'function') {
 
     $.fn.sliderGoods.options = {
         autoHeight: 'false', // высота всего слайдера
-        caseLimit: 4, //кол-во товаров в витрине
+        caseLimit: 4, //кол-во элементов в витрине
         spaceSection: 15, //расстояние между секциями
     };
+
+
+// =============begin SliderMain ==============
+
+
+
+     var SliderMain = {
+
+     	init: function (options, elem) {
+
+     		var self = this;
+     		self.elem = elem;
+     		self.ind = 0;
+     		self.ifBusy = 0;
+
+     		self.options = $.extend({}, $.fn.sliderGoods.options, options);
+
+     		self.calcConst();
+
+     		var li = $(this.elem).find('li').hide();
+
+     		$(li[0]).show();
+
+     		$(this.elem).find('.slider__btn').on('click', function (e) {
+     			e.preventDefault();
+
+     			if(self.ifBusy) {return};
+
+     			$(this).hasClass('slider__btn slider__btn--prev')
+     				? self.animation(li)
+     				: self.animation(li, true)
+     		});
+     	},
+
+       	calcConst: function () {
+       		var blur,
+       			self = this,
+       			blurString = '<div class="blur"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"><filter id="blur"><feGaussianBlur stdDeviation="3" /></filter></svg></div>';
+
+       		$(this.elem).find('li').each(function(i) {
+       			if (self.options.blur) {$(blurString).appendTo(this)};
+
+       			$(this).css({
+       				'background-image' : 'url(../' + $(this).children('img').attr('src') + ')',
+       				'z-index' : 1
+       			});
+       		});
+
+       		if(self.options.auto) {
+       			setInterval(function() {
+       				$(self.elem).find('.slider__btn--prev').trigger('click');
+       			}, self.options.auto)
+       		}
+       	},
+
+       	animation: function (elem, ind) {
+       		var self = this;
+       			self.ifBusy = 1;
+
+       		console.log('ind=' + !!ind + ind);
+
+       		if (ind){
+       			self.ind++;
+       			self.ind = self.ind % $(elem).length;
+       		} else {
+       			self.ind--;
+       			if (self.ind < 0)  self.ind = $(elem).length - 1;
+       		}
+       		console.log(self.options.anim);
+
+       		$(elem[self.ind]).fadeIn(self.options.anim, function() {
+	       			$(this).siblings("li").hide();
+	       			$(this).css('z-index', 1);
+	       			self.ifBusy = 0;
+       			})
+       			.css('z-index', 2);
+       	}
+     };
+
+
+
+    $.fn.sliderMain = function (options) {
+        return this.each(function() {
+            
+            var slider = Object.create( SliderMain );
+            slider.init( options, this );
+        });
+    };   
+
+    $.fn.sliderMain.options = {
+        blur: false, //заблюривание хедера
+        auto: false, // автопрокрутка, мс
+        anim: 2200 // время перехода
+    };
+
+
+
 
 // ===============	tabs begin ===============
 
@@ -174,13 +271,6 @@ $('.tabs__container').hide();
 
 	var menuCell = $('.navbar>ul>li>ul').hide(),
 		menuButton = $('.navbar>ul>li');
-
-	// menuCell
-	// .addClass('nav-list')
-	// .hide()
-	// .children('li')
-	// .show();
-
 
 		menuButton.hover(function() {
 			$(this).children('ul').show(100);

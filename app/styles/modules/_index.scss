@@ -268,6 +268,7 @@
 
 	@include e('title') {
 		border-radius: 5px 5px 0 0;
+		position: relative;
 
 		h3 {
 			font-size: 22px;
@@ -298,6 +299,12 @@
 				&:nth-child(even) {
 					padding-left: 20px;
 				}
+			}
+
+			button {
+				float: right;
+				line-height: 1em;
+				margin-top: 20px;
 			}
 		}
 
@@ -378,5 +385,19 @@
 
 	li {
 		padding: 7px 0;
+	}
+
+	@include e('picto') {
+		background: url(/images/icons-picto.png) 0 0 no-repeat;
+		position: absolute;
+		height: 22px;
+		width: 22px;
+		right: 15px;
+		top: 15px;
+
+		@include m('dialog') {background-position: 0 0;}
+		@include m('search') {background-position: -59px 0;}
+		@include m('sic') {background-position: -90px 0;}
+		@include m('ask') {background-position: -33px 0;}
 	}
 }

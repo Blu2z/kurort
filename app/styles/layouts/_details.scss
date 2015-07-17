@@ -157,3 +157,10 @@ input[type="checkbox"]:checked + label:before {
 .black {
     color: #000;
 }
+.subcategory,
+.slider__btn,
+.slide__desc,
+.adv,
+.tabs {
+    z-index: 10;
+}
