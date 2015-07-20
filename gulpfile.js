@@ -7,17 +7,6 @@ var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var urlAdjuster = require('gulp-css-url-adjuster');
-var fileinclude = require('gulp-file-include');
-
-gulp.task('fileinclude', function() {
-  console.log('include');
-  gulp.src(['app/template/*.html'])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
-    .pipe(gulp.dest('app'));
-});
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
@@ -105,15 +94,12 @@ gulp.task('serve', ['styles', 'fonts'], function () {
 
   // watch for changes
   gulp.watch([
-    'app/template/*.html',
-    'app/components/**/*',
     'app/*.html',
     'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('template/*.html', ['fileinclude']).on('change', reload);
   gulp.watch('app/styles/**/*.{scss,sass}', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -136,7 +122,7 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['fileinclude', 'html', 'styles', 'images', 'fonts', 'extras', 'jshint'], function () {
+gulp.task('build', ['html', 'styles', 'images', 'fonts', 'extras', 'jshint'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

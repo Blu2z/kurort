@@ -23,7 +23,6 @@
 	@include e('block') {
 		@extend .inline-block-vtop;
 
-
 		padding: 10px 35px;
 		box-sizing: border-box;
 
@@ -68,6 +67,13 @@
 			color: $clr-blue-midle;
 		}
 
+		span {
+			color: $clr-text-default;
+		}
+		.desc__cost {
+			line-height: 2.7em;
+		}
+
 		.desc__tags {
 			position: relative;
 			bottom: 0;
@@ -105,4 +111,7 @@
 		margin-bottom: 20px;
 		width: 100%;
 	}
+}
+.sol-label-text {
+	color: $clr-text-default;
 }

@@ -349,27 +349,11 @@
   ga('create','UA-XXXXX-X');ga('send','pageview');
 </script>
 
-
-<!-- bower:js -->
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<!-- endbower -->
-
-
-<!-- build:js scripts/vendor.js -->
+<script src="scripts/vendor.js"></script>
+<script src="scripts/main.js"></script>
 <script src="scripts/searchableOptionList.js"></script>
 <script src="scripts/ion.rangeSlider.min.js"></script>
 <script src="scripts/jquery-ui.js"></script>
-<!-- endbuild -->
-
-<!-- build:js scripts/main.js -->
-<script src="scripts/main.js">
-
-    <!-- endbuild -->
-
-    <!-- build:js scripts/placeholder-ie9.js -->
-    <script src="scripts/placeholder-ie9.js"></script>
-    <!-- endbuild -->
-
 
 <!--[if lt IE 10]>
     <script src="scripts/placeholder-ie9.js"></script>
@@ -427,13 +411,10 @@
             hide_min_max: true
         });
         $( "#datepicker2, #datepicker1" ).datepicker({
-            buttonImage:'/images/calendar_ico.png',
+            buttonImage:'./images/calendar_ico.png',
             showOn:'button',
             buttonImageOnly:true,
         });
     </script>
-
-
-
 </body>
 </html>
