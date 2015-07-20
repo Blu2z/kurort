@@ -17,6 +17,11 @@
 
 		button {
 			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+
+		& > a {
+			display: block;
 		}
 	}
 }

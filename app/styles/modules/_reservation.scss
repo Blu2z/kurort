@@ -1,10 +1,20 @@
+.container {
+	&.container--bg-sea {
+		background: url(/images/bg-sea.jpg) 0 0 no-repeat;
+	}
+}
 .reservation {
 	background: url(/images/form-bg.jpg) 0 0 no-repeat;
 	margin-top: 20px;
 	border-radius: 5px;
+	color: #eee;
+
+	@include m('lite') {
+		background: url(/images/form-bg-lite.jpg) 0 0 no-repeat;
+		color: $clr-text-default;
+	}
 
 	form > p {
-		color: #eee;
 		padding: 20px 35px 0;
 		line-height: 1.5em;
 	}
@@ -20,7 +30,6 @@
 		& > label,
 		.input__wrap label {
 			display: block;
-			color: #eee;
 			padding: 15px 0;
 		}
 
