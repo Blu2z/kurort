@@ -19,7 +19,7 @@
 		vertical-align: top;
 		
 		@include m('logo') {
-			padding: 0 7px;
+			// padding: 0 7px;
 		}
 
 		@include m('action') {

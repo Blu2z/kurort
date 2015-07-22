@@ -248,11 +248,11 @@ $('.tab').on('click', function( e ) {
 	menuButton = $('.navbar>ul>li');
 
 	menuButton.hover(function() {
-		$(this).children('ul').show(100);
+		$(this).children('ul').show();
 		$(this).addClass('active');
 	},
 	function() {
-		$(this).children('ul').hide(100);
+		$(this).children('ul').hide();
 		$(this).removeClass('active');
 	}
 	);

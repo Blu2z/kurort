@@ -62,9 +62,12 @@ body {
     font-family: "Arial Regular", arial;
     min-height: 808px;
     min-width: 1024px;
+    // max-width: 1920px;
+    // margin: 0 auto;
     width: 100%;
     color: $clr-text-default;
     background-color: $clr-body;
+    text-size-adjust: none
 }
 img {
     max-width: 100%;
