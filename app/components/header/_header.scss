@@ -19,11 +19,12 @@
 		vertical-align: top;
 		
 		@include m('logo') {
-			// padding: 0 7px;
+			width: 28%;
 		}
 
 		@include m('action') {
-			margin-left: 30px;
+			margin-left: 3%;
+			width: 23%
 		}
 
 		@include m('schedule') {
@@ -114,6 +115,7 @@
 	position: relative;
 	width: 1000px;
 	z-index: 15;
+	text-align: center;
 
 	&>ul {
 		& > * + * {
@@ -150,6 +152,7 @@
 	}
 }
 .subcategory {
+	text-align: left;
 	background-color: $clr-green-medium;
 	border-bottom: 2px solid $clr-green;
 	border-radius: 10px;

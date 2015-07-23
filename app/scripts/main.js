@@ -259,6 +259,17 @@ $('.tab').on('click', function( e ) {
 	
 })(jQuery);
 
+$(window).on('resize', function() {
+	console.log(detectZoom.zoom());
+	if(detectZoom.zoom() < 1) {
+		$('body').css('zoom', 2 - detectZoom.zoom() );
+		console.log('zooming!');
+	} else {
+		$('body').css('zoom', 1);
+	}
+});
+$(window).trigger('resize');
+
 })( jQuery, window, document );
 
 

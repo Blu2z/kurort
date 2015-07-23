@@ -102,7 +102,7 @@
 
             <div class="content__wrap">
                 <div class="content__desc content__desc--p25">
-                    <h4>Бесплатная служба бронирования</h4>
+                    <h1>Бесплатная служба бронирования</h1>
                     <div class="tabs">
                         <ul>
                             <li class="tab tab--img tab--sanatorium active">Санатории КМВ</li>
@@ -348,7 +348,12 @@
   r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
   ga('create','UA-XXXXX-X');ga('send','pageview');
 </script>
-
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  
+  <!-- endbower -->
+  <!-- endbuild -->
 <script src="scripts/vendor.js"></script>
 
 <script src="scripts/searchableOptionList.js"></script>
@@ -410,11 +415,7 @@
             force_edges: true,
             hide_min_max: true
         });
-        $( "#datepicker2, #datepicker1" ).datepicker({
-            buttonImage:'./images/calendar_ico.png',
-            showOn:'button',
-            buttonImageOnly:true,
-        });
+        $( "#datepicker2, #datepicker1" ).datepicker();
     </script>
 </body>
 </html>

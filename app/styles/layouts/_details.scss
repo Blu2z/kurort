@@ -101,9 +101,9 @@ input[type="checkbox"] + label:before {
     cursor:pointer;
     display:inline-block;
     height: 14px;
-    margin: -1px 15px 0 0;
+    margin: -1px 12px 0 0;
     vertical-align:middle;
-    width: 14px;
+    width: 15px;
 }
 
 input[type="checkbox"]:checked + .sol-label-text:before,
