@@ -30,6 +30,8 @@
 	background: $clr-bg url(/images/bg2.png) 0 0 no-repeat;
 	border-top: 2px solid #fff;
 	padding: 35px 0 50px 0;
+	position: relative;
+	z-index: 50;
 
 	@include e('wrap') {
 		@extend .align-center;
@@ -157,18 +159,22 @@
 
 	@include e('link') {
 		border-bottom: 	1px solid $clr-green-active;
-		// width: 150px;
-		position: absolute;
-		left: 0;
-		top: 8px;		
+
+		@include m('fix') {
+			display: inline-block;
+			max-width: 150px;
+		}
+				
 
 		&:hover {
 			border: 0;
 			text-decoration: none;
+			// border-bottom: 	1px solid #fff;
 		}
 
 		@include m('blue') {
 			border-color: $clr-blue;
+			position: inherit;
 		}
 	}
 

@@ -17,12 +17,11 @@
 }
 
 .tabs {
-    margin-top: 23px;
+    margin-top: 20px;
     position: relative;
 
     ul {
         @extend .align-center;
-        // text-align: center;
     }
 }
 .tab {

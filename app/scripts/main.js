@@ -1,6 +1,3 @@
-
-
-
 'use strict';
 
 if (typeof Object.create !== 'function') {
@@ -169,7 +166,7 @@ var SliderMain = {
 
 		if(self.options.auto) {
 			setInterval(function() {
-				$(self.elem).find('.slider__btn--prev').trigger('click');
+				$(self.elem).find('.slider__btn--next').trigger('click');
 			}, self.options.auto)
 		}
 	},
@@ -178,8 +175,6 @@ var SliderMain = {
 		var self = this;
 		self.ifBusy = 1;
 
-		console.log('ind=' + !!ind + ind);
-
 		if (ind){
 			self.ind++;
 			self.ind = self.ind % $(elem).length;
@@ -187,7 +182,6 @@ var SliderMain = {
 			self.ind--;
 			if (self.ind < 0)  self.ind = $(elem).length - 1;
 		}
-		// console.log(self.options.anim);
 
 		$(elem[self.ind]).fadeIn(self.options.anim, function() {
 			$(this).siblings("li").hide();
@@ -259,16 +253,19 @@ $('.tab').on('click', function( e ) {
 	
 })(jQuery);
 
-$(window).on('resize', function() {
-	console.log(detectZoom.zoom());
-	if(detectZoom.zoom() < 1) {
-		$('body').css('zoom', 2 - detectZoom.zoom() );
-		console.log('zooming!');
-	} else {
-		$('body').css('zoom', 1);
-	}
-});
-$(window).trigger('resize');
+var zoom = document.documentElement.clientWidth;
+    $(window).resize(function() {
+        var zoomNew = zoom / window.innerWidth;
+        if( zoomNew < 0.91) {
+           $('body').css({
+                '-ms-zoom': 1,
+                'zoom': 2.1 - zoomNew
+                
+            });
+       } else {
+           $('body').css('zoom', 1);
+       }
+    });
 
 })( jQuery, window, document );
 
